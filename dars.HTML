@@ -381,8 +381,8 @@
   </footer>
 
 
-
-const tabLinks = document.querySelectorAll('.tab-link');
+<script>
+  const tabLinks = document.querySelectorAll('.tab-link');
   const tabContents = document.querySelectorAll('.tab-content');
 
   function activateTab(tabName) {
@@ -407,11 +407,9 @@ const tabLinks = document.querySelectorAll('.tab-link');
 
   // عند فتح الصفحة من الرابط
   const params = new URLSearchParams(window.location.search);
-  const tabFromURL = params.get('tab') || 'home';
+  const tabFromURL = params.get('tab') || 'dars';
   activateTab(tabFromURL);
-
 </script>
-
 
 
 
