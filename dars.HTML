@@ -383,52 +383,6 @@
 
 
 
-<script>
-  function confirmDownload(url) {
-    const ok = confirm('هذا الكتاب لمن أراد الانتفاع به ولا يسمح بطباعته للمتاجرة فيه');
-    if(ok) { window.location.href = url; }
-    return false;
-  }
-
-  // تبديل التبويبات
-  const tabLinks = document.querySelectorAll('.tab-link');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  tabLinks.forEach(link => {
-    link.addEventListener('click', function(e){
-      e.preventDefault();
-      const target = this.dataset.target;
-
-      tabLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
-
-      tabContents.forEach(tc => {
-        tc.classList.toggle('active', tc.id === target);
-      });
-    });
-  });
-
-  // قراءة التبويب المطلوب من الرابط
-const urlParams = new URLSearchParams(window.location.search);
-const tabFromURL = urlParams.get('tab');
-
-if (tabFromURL) {
-  const targetLink = document.querySelector(`.tab-link[data-target="${tabFromURL}"]`);
-
-  if (targetLink) {
-    targetLink.click(); // تفعيل التبويب المطلوب
-  }
-}
-
-// تمييز المقال المختار عند الضغط
-const articleLinks = document.querySelectorAll('.articles-list a');
-
-articleLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    articleLinks.forEach(l => l.classList.remove('active-article')); // إزالة من الكل
-    this.classList.add('active-article'); // إضافة اللون للمقال الحالي
-  });
-});
 
 
 
