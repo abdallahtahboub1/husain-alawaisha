@@ -1552,6 +1552,224 @@
   const params = new URLSearchParams(window.location.search);
   const tabFromURL = params.get('tab') || 'dars';
   activateTab(tabFromURL);
+
+
+ function confirmDownload(url) {
+    const ok = confirm('هذا الكتاب لمن أراد الانتفاع به ولا يسمح بطباعته للمتاجرة فيه');
+    if (ok) {
+      window.location.href = url;
+    }
+    return false;
+  }
+
+  // =============================
+  // التبويبات (Navigation Tabs)
+  // =============================
+  const tabLinks = document.querySelectorAll('.tab-link');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  function activateTab(tabName) {
+    // تفعيل الرابط
+    tabLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.target === tabName);
+    });
+
+    // تفعيل المحتوى
+    tabContents.forEach(section => {
+      section.classList.toggle('active', section.id === tabName);
+    });
+  }
+
+  // عند الضغط على التبويبات
+  tabLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = this.dataset.target;
+
+      activateTab(target);
+
+      // تحديث الرابط بدون إعادة تحميل
+      history.pushState(null, '', `?tab=${target}`);
+    });
+  });
+
+  // =============================
+  // قراءة التبويب من الرابط ?tab=
+  // =============================
+  const params = new URLSearchParams(window.location.search);
+  const tabFromURL = params.get('tab');
+
+  if (tabFromURL) {
+    activateTab(tabFromURL);
+  } else {
+    activateTab('home'); // الافتراضي
+  }
+
+  // تمييز المقال المختار عند الضغط
+  const articleLinks = document.querySelectorAll('.articles-list a');
+
+  articleLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      articleLinks.forEach(l => l.classList.remove('active-article'));
+      this.classList.add('active-article');
+    });
+  });
+
+  // ==============================
+  // سلايدر الكتب مع الأسهم والنقاط
+  // ==============================
+
+  let currentBook = 0;
+const books = document.querySelectorAll('#home .book-slide');
+const slider = document.querySelector('#home .book-slider');
+
+if(slider && books.length > 0){
+
+  // إنشاء النقاط
+  const dotsContainer = document.createElement('div');
+  dotsContainer.className = 'slider-dots';
+  slider.appendChild(dotsContainer);
+
+  const dots = [];
+  books.forEach((book, index) => {
+    const dot = document.createElement('span');
+    if(index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToBook(index));
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+  });
+
+  // عرض الكتاب الحالي
+  function showBook(index){
+    books.forEach(b => b.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    books[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  // الانتقال للكتاب التالي
+  function nextBook(){
+    currentBook = (currentBook + 1) % books.length;
+    showBook(currentBook);
+  }
+
+  // الانتقال للكتاب السابق
+  function prevBook(){
+    currentBook = (currentBook - 1 + books.length) % books.length;
+    showBook(currentBook);
+  }
+
+  // الانتقال لأي كتاب بالنقطة
+  function goToBook(index){
+    currentBook = index;
+    showBook(currentBook);
+  }
+
+  // عرض أول كتاب عند تحميل الصفحة
+  showBook(0);
+}
+
+
+
+// ===== سلايدر المقالات =====
+
+
+
+
+
+// ==============================
+// سلايدر المقالات في الصفحة الرئيسية
+// ==============================
+
+let currentArticle = 0;
+const articles = document.querySelectorAll('#home-articles-slider .article-slide');
+const dotsContainerArticles = document.querySelector('#home-articles-slider .slider-dots-articles');
+const dotsArticles = [];
+
+// إنشاء النقاط
+articles.forEach((article, index) => {
+  const dot = document.createElement('span');
+  if(index === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToArticle(index));
+  dotsContainerArticles.appendChild(dot);
+  dotsArticles.push(dot);
+});
+
+// عرض المقال الحالي
+function showArticle(index) {
+  articles.forEach(a => a.classList.remove('active'));
+  dotsArticles.forEach(d => d.classList.remove('active'));
+  articles[index].classList.add('active');
+  dotsArticles[index].classList.add('active');
+}
+
+// المقال التالي
+function nextArticle() {
+  currentArticle = (currentArticle + 1) % articles.length;
+  showArticle(currentArticle);
+}
+
+// المقال السابق
+function prevArticle() {
+  currentArticle = (currentArticle - 1 + articles.length) % articles.length;
+  showArticle(currentArticle);
+}
+
+// الانتقال لأي مقال بالنقطة
+function goToArticle(index) {
+  currentArticle = index;
+  showArticle(currentArticle);
+}
+
+// عرض أول مقال عند التحميل
+showArticle(0);
+
+
+let currentFatwa = 0;
+const fatwas = document.querySelectorAll('#home-fatwa-slider .article-slide');
+const dotsContainerFatwa = document.querySelector('#home-fatwa-slider .slider-dots-fatwa');
+const dotsFatwa = [];
+
+// إنشاء النقاط
+fatwas.forEach((fatwa, index) => {
+  const dot = document.createElement('span');
+  if(index === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToFatwa(index));
+  dotsContainerFatwa.appendChild(dot);
+  dotsFatwa.push(dot);
+});
+
+// عرض السؤال الحالي
+function showFatwa(index) {
+  fatwas.forEach(f => f.classList.remove('active'));
+  dotsFatwa.forEach(d => d.classList.remove('active'));
+  fatwas[index].classList.add('active');
+  dotsFatwa[index].classList.add('active');
+}
+
+// السؤال التالي
+function nextFatwa() {
+  currentFatwa = (currentFatwa + 1) % fatwas.length;
+  showFatwa(currentFatwa);
+}
+
+// السؤال السابق
+function prevFatwa() {
+  currentFatwa = (currentFatwa - 1 + fatwas.length) % fatwas.length;
+  showFatwa(currentFatwa);
+}
+
+// الانتقال لأي سؤال بالنقطة
+function goToFatwa(index) {
+  currentFatwa = index;
+  showFatwa(currentFatwa);
+}
+
+// عرض أول سؤال عند تحميل الصفحة
+showFatwa(0);
+
+
+
 </script>
 
 
