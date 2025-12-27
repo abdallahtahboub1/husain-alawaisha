@@ -241,599 +241,6 @@
 }
 
 
-  :root {
-      --green-main: #8b6718;
-      --green-dark: #733007;
-      --bg-light: #E6F4EA;
-      --text-secondary: #555555;
-      --white: #FFFFFF;
-    }
-
-    body {
-      font-family: 'Traditional Arabic', Tahoma, sans-serif;
-      background-color: var(--bg-light);
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-      color: var(--text-secondary);
-    }
-
-    header {
-      background-color: var(--green-main);
-      color: var(--white);
-      text-align: center;
-      padding: 100px 20px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    header h1 { font-size: 3em; margin:0;}
-    header h2 { font-size: 2em; margin-top:10px;}
-
-    nav {
-      background-color: var(--white);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-radius: 0 0 10px 10px;
-      text-align: center;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    nav ul li a {
-      display: block;
-      padding: 12px 25px;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: var(--text-secondary);
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: var(--green-main);
-      color: var(--white);
-      font-weight: bold;
-    }
-
-    .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-
-    .books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-      gap: 20px;
-    }
-
-    .book-card {
-      background-color: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 6px 22px rgba(0,0,0,0.12);
-      transition: 0.3s;
-      text-align: center;
-      padding-bottom: 20px;
-    }
-
-    .book-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.18); }
-
-    .book-card img { width: 100%; height: 330px; object-fit: cover; border-bottom: 5px solid var(--green-main); }
-
-    .book-info { padding: 18px 25px; }
-    .book-info h3 { font-size: 1.4em; color: var(--green-dark); margin-bottom: 10px; }
-    .book-info p { color: var(--text-secondary); font-size: 1.05em; line-height: 1.8; margin-bottom: 18px; }
-
-    .download-btn {
-      text-decoration: none;
-      background-color: var(--green-main);
-      padding: 12px 18px;
-      color: var(--white);
-      border-radius: 30px;
-      font-size: 1.05em;
-      font-weight: bold;
-      display: inline-block;
-      transition: 0.25s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .download-btn:hover {
-      background-color: var(--green-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    .social-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .social-grid a img {
-      width: 80px;
-      transition: transform 0.3s;
-    }
-
-    .social-grid a img:hover { transform: scale(1.1); }
-
-    footer {
-      background-color: var(--white);
-      text-align: center;
-      padding: 25px;
-      font-size: 1em;
-      color: var(--text-secondary);
-      margin-top: 40px;
-      border-top: 1px solid rgba(0,0,0,0.1);
-    }
-
-    /* حاوية المقالات */
-#articles {
-  max-width: 900px;  /* حد أقصى للعرض */
-  margin: 40px auto; /* توسيط القسم أفقياً */
-  padding: 20px;
-  background-color: #f9fefb; /* لون خلفية فاتح لطيف */
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  direction: rtl; /* تأكد من اتجاه النص */
-}
-
-
-#fatwa {
-  max-width: 900px;  /* حد أقصى للعرض */
-  margin: 40px auto; /* توسيط القسم أفقياً */
-  padding: 20px;
-  background-color: #f9fefb; /* لون خلفية فاتح لطيف */
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  direction: rtl; /* تأكد من اتجاه النص */
-}
-
-
-#dars {
-  max-width: 900px;  /* حد أقصى للعرض */
-  margin: 40px auto; /* توسيط القسم أفقياً */
-  padding: 20px;
-  background-color: #f9fefb; /* لون خلفية فاتح لطيف */
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  direction: rtl; /* تأكد من اتجاه النص */
-}
-
-/* العنوان */
-#articles h2 {
-  color: var(--green-dark);
-  text-align: right;
-  margin-bottom: 25px;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-/* قائمة المقالات */
-#articles ul {
-  list-style: none; /* إزالة النقاط الافتراضية */
-  padding: 0;
-  margin: 0;
-}
-
-/* عنصر كل مقال */
-#articles ul li {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* عنوان المقال */
-#articles ul li a {
-  font-weight: bold;
-  color: var(--green-main);
-  font-size: 1.2em;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-#articles ul li a:hover {
-  color: var(--green-dark);
-  text-decoration: underline;
-}
-
-/* وصف المقال */
-#articles ul li p {
-  color: var(--text-secondary);
-  margin-top: 6px;
-  font-size: 1em;
-  line-height: 1.5;
-}
-/* رابط المقال عند الضغط */
-.articles-list a.active-article {
-  color: var(--green-dark);
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-
-.articles-list a {
-  color: var(--green-main); /* لون أخضر بني متناسق مع الموقع */
-  text-decoration: none; /* إزالة الخط السفلي الافتراضي */
-  transition: color 0.3s ease;
-}
-
-.articles-list a:hover,
-.articles-list a:focus {
-  color: var(--green-dark); /* لون أغمق عند المرور أو التركيز */
-  text-decoration: underline; /* خط سفلي يظهر فقط عند المرور */
-}
-
-/* ===== سلايدر أحدث الكتب ===== */
-.book-slider {
-  max-width: 1100px;
-  margin: 80px auto;
-  position: relative;
-  background: var(--white);
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.18);
-  overflow: hidden;
-}
-
-.book-slide {
-  display: none;
-  align-items: center;
-  gap: 40px;
-  padding: 40px;
-}
-
-.book-slide.active {
-  display: flex;
-}
-
-.book-slide img {
-  width: 320px;
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.2);
-}
-
-.book-details {
-  flex: 1;
-}
-
-.book-details h3 {
-  color: var(--green-dark);
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-.book-details p {
-  font-size: 1.2em;
-  line-height: 1.9;
-  margin-bottom: 25px;
-}
-
-.book-details a {
-  background: var(--green-main);
-  color: var(--white);
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.book-details a:hover {
-  background: var(--green-dark);
-}
-
-/* الأسهم */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #8b6718;
-  border: none;
-  color: #fff;
-  font-size: 22px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.slider-arrow:hover {
-  background-color: #733007;
-}
-
-.arrow-left {
-  right: 15px;
-}
-
-.arrow-right {
-  left: 15px;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .book-slide {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .book-slide img {
-    width: 220px;
-  }
-}
-
-
-.slider-dots {
-  position: absolute;
-  bottom: 30px;          /* تحكم بالارتفاع (ارفع/أنزل) */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-/* باقي إعداد النقاط */
-.slider-dots span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 6px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.slider-dots span.active {
-  background: var(--green-main);
-  transform: scale(1.2);
-}
-
-
-
-.about-site {
-  max-width: 1100px;
-  margin: 60px auto;
-  background: var(--white);
-  padding: 45px 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
-  text-align: center;
-}
-
-
-
-.section-title {
-  color: var(--green-dark);
-  font-size: 2.2em;
-  margin-bottom: 25px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
-  width: 80px;
-  height: 4px;
-  background: var(--green-main);
-  border-radius: 2px;
-}
-
-
-.about-site h2 {
-  color: #8b6b1f;
-  margin-bottom: 15px;
-}
-
-
-.about-text {
-  max-width: 800px;
-  margin: auto;
-  font-size: 2em;
-  line-height: 4;
-  color: var(--text-secondary);
-}
-
-
-.about-site p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 2.5 !important;
-  color: #444;
-  font-size: 28px !important;   /* تكبير واضح جدًا */
-}
-
-.dars-card {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 15px 20px;
-  background: var(--white);
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  transition: transform 0.3s;
-}
-
-.dars-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.dars-card img {
-  width: 180px;   /* الحجم الجديد الأصغر */
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.dars-info h3 {
-  font-size: 1.6em;
-  color: var(--green-dark);
-  margin-bottom: 12px;
-}
-
-.dars-info .download-btn {
-  font-size: 1.1em;
-  padding: 10px 18px;
-}
-.articles-slider {
-  background-color: #f9fafa;
-  padding: 30px 40px;
-  border-radius: 15px;
-  position: relative;
-  max-width: 900px;
-  margin: 30px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  font-family: 'Tajawal', sans-serif;
-}
-
-
-.articles-slider h2 {
-  color: #8b6718;
-  font-size: 18px;
-  text-align: right;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-.article-slide {
-  display: none;
-  text-align: right;
-  direction: rtl;
-}
-
-.article-slide.active {
-  display: block;
-}
-
-.article-slide h3 {
-  color: #333;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-
-.article-slide .read-btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background-color: #8b6718;
-  color: #fff;
-  font-size: 14px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.article-slide .read-btn:hover {
-  background-color: #733007;
-}
-
-.article-slide p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.article-info h3 {
-  font-size: 1.5em;
-  color: var(--green-dark);
-  margin-bottom: 15px;
-}
-
-.article-info p {
-  font-size: 1.2em;
-  color: var(--text-secondary);
-  line-height: 2.5;
-  margin-bottom: 30px;
-}
-
-.read-btn {
-  text-decoration: none;
-  background-color: var(--green-main);
-  padding: 12px 25px;
-  color: var(--white);
-  border-radius: 30px;
-  font-size: 1.05em;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.read-btn:hover {
-  background-color: var(--green-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* الأسهم */
-.articles-slider .slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--green-main);
-  color: #fff;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.articles-slider .slider-arrow:hover {
-  background: var(--green-dark);
-}
-
-.articles-slider .arrow-left { right: 10px; }
-.articles-slider .arrow-right { left: 10px; }
-
-/* النقاط */
-.slider-dots-articles {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.slider-dots-articles span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider-dots-articles span.active {
-  background-color: #8b6718;
-}
-
-
   </style>
 </head>
 
@@ -844,21 +251,21 @@
     <h2>د .حُسَين بن عُودَة العَوايشَة </h2>
   </header>
 
-<nav>
-  <ul>
-    <li><a href="#" class="tab-link active" data-target="home">الرئيسية</a></li>
-    <li><a href="#" class="tab-link" data-target="books">الكتب</a></li>
-    <li><a href="#" class="tab-link" data-target="articles">المقالات</a></li>
-    <li><a href="#" class="tab-link" data-target="fatwa">سؤال وجواب</a></li>
-    <li><a href="#" class="tab-link" data-target="dars">المحاضرات</a></li>
-    <li><a href="#" class="tab-link" data-target="social">مواقع التواصل</a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+             <li><a href="MOHADMD..html?tab=home">الرئيسية</a></li>
+      <li><a href="MOHADMD..html?tab=books">الكتب</a></li>
+      <li><a href="MOHADMD..html?tab=articles" >المقالات</a></li>
+      <li><a href="MOHADMD..html?tab=fatwa">سؤال وجواب</a></li>
+          <li><a href="MOHADMD..html?tab=dars"  > محاضرات</a></li>
+      <li><a href="MOHADMD..html?tab=social">مواقع التواصل</a></li>
+    </ul>
+  </nav>
 
 
 
   <main class="container">
-    <section id="dars" class="tab-content">
+    <section id="books" class="tab-content active">
       <h2 style="color: var(--green-dark); margin-bottom: 20px;"> محاضرات الشيخ حسين العوايشة</h2>
 <div class="books-grid">
 
@@ -960,556 +367,6 @@
 
 
 
- <section id="books" class="tab-content">
-      <h2 style="color: var(--green-dark); margin-bottom: 20px;"> كتب الشيخ حسين العوايشة</h2>
-      <div class="books-grid">
-
-        <div class="book-card">
-          <img src="الاخلاص.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>الاخلاص</h3>
-            <p>جَاءَ هٰذَا الكِتَابُ لِبَيَانِ أَهَمِّيَّةِ الإِخْلَاصِ فِي العِبَادَاتِ وَالأَعْمَالِ، وَذِكْرِ فَضَائِلِهِ وَصُوَرِهِ، وَتَبْيِينِ خَطَرِ الرِّيَاءِ عَلَى الأَعْمَالِ، مَعَ بَيَانِ أَسْبَابِهِ وَطُرُقِ مُعَالَجَتِهِ، وَذٰلِكَ مِمَّا يَعُودُ بِالنَّفْعِ عَلَى المُسْلِمِ فِي تَصْحِيحِ أَعْمَالِهِ وَسَلَامَةِ دِينِهِ، وَتَحْقِيقِ النَّجَاةِ عِنْدَ اللهِ عَزَّ وَجَلَّ</p>
-<a href="الاخلاص.pdf" class="download-btn" onclick="return confirmDownload('الاخلاص.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="البكاء من خشية الله.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>البكاء من خشية الله</h3>
-            <p> كِتَابٌ يَتَضَمَّنُ فَضْلَ البُكَاءِ مِنْ خَشْيَةِ اللهِ، وَيُوَضِّحُ السَّبِيلَ إِلَى ذٰلِكَ، مُعَالِجًا العَوَائِقَ قَدْرَ المُسْتَطَاعِ، ذَاكِرًا بَعْضَ النُّصُوصِ وَالآثَارِ فِي بُكَاءِ النَّبِيِّ ﷺ وَأَصْحَابِهِ رَضِيَ اللهُ عَنْهُمْ</p>
-            <a href="البكاء من خشية الله.pdf" class="download-btn" onclick="return confirmDownload('البكاء من خشية الله.pdf')"> تحميل الكتاب</a>
-
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="التحذير من الشيطان.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>التحذير من الشيطان</h3>
-            <p>يَتضَمّن هٰذَا الكِتَابَ التَّحْذِيرَ مِنْ خَطَرِ الشَّيْطَانِ، وَبَيَانَ عِظَمِ أَثَرِهِ، وَإِيضَاحَ مَكَايِدِهِ لِبَنِي آدَمَ، وَمَا يَجْلِبُهُ إِغْوَاؤُهُ مِنَ المَفَاسِدِ، كَمَا يَتَنَاوَلُ الأُمُورَ الَّتِي تُبْعِدُ الشَّيْطَانَ وَتُنَفِّرُهُ، وَيَتَضَمَّنُ فَصْلًا فِي صِيَغِ الِاسْتِعَاذَةِ، وَمَا فِي سُورَةِ الفَلَقِ مِنْ كُنُوزٍ وَمَعَانٍ عَظِيمَةٍ، إِلَى غَيْرِ ذٰلِكَ مِنَ الأَسْبَابِ الَّتِي تَكُونُ حِصْنًا لِلْعَبْدِ مِنَ الشَّيْطَانِ بِإِذْنِ اللهِ تَعَالى</p>
-            <a href="التحذير من الشيطان.pdf" class="download-btn" onclick="return confirmDownload('التحذير من الشيطان.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="الصلاة.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>الصلاة</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن الصلاة.</p>
-     <a href="الصلاة.pdf" class="download-btn" onclick="return confirmDownload('الصلاة.pdf')"> تحميل الكتاب</a>
-
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="الغيبة.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>الغيبة</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن الغيبة.</p>
-   <a href="الغيبة.pdf" class="download-btn" onclick="return confirmDownload('الغيبة.pdf')">تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="الفصل المبين.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>الفصل المبين</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن الفصل المبين.</p>
-   <a href="الفصل المبين.pdf" class="download-btn" onclick="return confirmDownload('الفصل المبين.pdf')"> تحميل الكتاب</a>
-
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="القبر عذابه ونعيمه.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>القبر عذابه ونعيمه</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن القبر عذابه ونعيمه.</p>
-               <a href="القبر عذابه ونعيمه.pdf" class="download-btn" onclick="return confirmDownload('القبر عذابه ونعيمه.pdf')"> تحميل الكتاب</a>
-
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="المظهرية الجوفاء.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>المظهرية الجوفاء</h3>
-            <p> يَتَضَمَّنُ الكِتَابُ ذَم المُظَاهَرِيَّةِ المُعَاصِرَةِ، وَكَثِيرًا مِنْ أَسَالِيبِهَا فِي العَصْرِ الحَدِيثِ، كَالمُظَاهَرِيَّةِ فِي الأَفْرَاحِ، وَالمَآتِمِ، وَالزِّيَارَاتِ، وَيَتَنَاوَلُ حَالَ مَسَاجِدِ اليَوْمِ، مُقَارِنًا إِيَّاهَا بمَسْجِدِ النَّبِيِّ ﷺ، وَكَيْفَ كَانَ حَالُ سَلَفِ هٰذِهِ الأُمَّةِ فِي لزوم الكتاب و السُّنَّة</p>
-<a href="المظهرية الجوفاء.pdf" class="download-btn" onclick="return confirmDownload('المظهرية الجوفاء.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-
-
-          <div class="book-card">
-          <img src="فيض الرحمن في مفكرة رمضان .png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>فيض الرحمن في مفكرة رمضان </h3>
-            <p>يَتَضَمَّنُ هٰذَا الكِتَابُ وَظَائِفَ شَهْرِ رَمَضَانَ المُبَارَكِ وَأَعْمَالَهُ، وَقَدْ جَعَلَ الشَّيْخُ لِكُلِّ يَوْمٍ مِنْ أَيَّامِ رَمَضَانَ صَفْحَتَيْنِ، تَضُمَّانِ التَّذْكِيرَ بِفَضْلِهِ، وَأَحْكَامِهِ، وَآدَابِهِ، وَفَضْلِ تِلَاوَةِ القُرْآنِ العَظِيمِ، وَالصَّدَقَاتِ، وَمَا يَلْزَمُ العِيدَ مِنَ البِرِّ وَالصِّلَةِ وَغَيْرِهَا مِنَ الحُقُوقِ.</p>
-<a href="فيض الرحمن في مفكرة رمضان .pdf" class="download-btn" onclick="return confirmDownload('فيض الرحمن في مفكرة رمضان .pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-
-
-
-        <div class="book-card">
-          <img src="اولويات العلم.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>اولويات العلم</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن اولويات العلم.</p>
-            <a href="اولويات العلم.pdf" class="download-btn" onclick="return confirmDownload('اولويات العلم.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="تسوية الصفوف.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>تسوية الصفوف</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن تسوية الصفوف.</p>
-<a href="تسوية الصفوف.pdf" class="download-btn" onclick="return confirmDownload('تسوية الصفوف.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="سورة المطففين.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>سورة المطففين</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن سورة المطففين.</p>
-            <a href="سورة المطففين.pdf" class="download-btn" onclick="return confirmDownload('سورة المطففين.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="كيف تحكم نفسك.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>كيف تحكم نفسك</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن كيف تحكم نفسك.</p>
-       <a href="كيف تحكم نفسك.pdf" class="download-btn" onclick="return confirmDownload('كيف تحكم نفسك.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="مصيبة موت النبي.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>مصيبة موت النبي صلى الله عليه وسلم</h3>
-            <p> كِتَابٌ يَتَكَلَّمُ عَنْ عِظَمِ مُصِيبَةِ مَوْتِ النَّبِيِّ ﷺ، وَأَثَرِ هٰذِهِ المُصِيبَةِ عَلَى المُجْتَمَعِ وَالفَرْدِ</p>
-       <a href="مصيبة موت النبي.pdf" class="download-btn" onclick="return confirmDownload('مصيبة موت النبي.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="وصية مودع.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>وصية مودع</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن وصية مودع.</p>
-       <a href="وصية مودع.pdf" class="download-btn" onclick="return confirmDownload('وصية مودع.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <img src="فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.png" alt="غلاف الكتاب">
-          <div class="book-info">
-            <h3>فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود</h3>
-            <p>كتاب يتناول شرحًا مبسطًا عن فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.</p>
-       <a href="فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.pdf" class="download-btn" onclick="return confirmDownload('فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.pdf')"> تحميل الكتاب</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  <section id="social" class="tab-content">
-      <h2 style="color: var(--green-dark); margin-bottom:20px;">🟡 منصات خدمة علم الشيخ د.حسين العوايشة </h2>
-      <div class="social-grid">
-        <a href="https://chat.whatsapp.com/BXys4PrbzHe9NGiKgblcvG" target="_blank">
-          <img src="whatsapp.jpg" alt="واتساب">
-        </a>
-        <a href="https://www.facebook.com/share/1BCydSDPMT/?mibextid=wwXIfr" target="_blank">
-          <img src="facebook.png" alt="بيج  الفيسبوك">
-        </a>
-
-        <a href="https://www.instagram.com/reel/Cl6D7dQDa3l/?igshid=MDJmNzVkMjY=" target="_blank">
-          <img src="instagram.jpg" alt="انستغرام">
-        </a>
-        <a href="https://youtube.com/@HussienAlawaysheh" target="_blank">
-          <img src="youtube.png" alt="يوتيوب">
-        </a>
-
-           <a href="https://x.com/hussienawayshe" target="_blank">
-          <img src="x.png" alt="التويتر ">
-        </a>
-
-               <a href="https://t.me/droos_sheikh_hussein" target="_blank">
-          <img src="t.png" alt="التلغرام ">
-        </a>
-      </div>
-    </section>
-  </main>
-
-<section id="articles" class="tab-content">
-  <h2>قائمة المقالات</h2>
-
-  <div class="articles-list">
-    <article class="article-item">
-      <h3><a href="MOHADMD.2.HTML">نَصِيحَةُ مُحِبٍّ فِي المَذْهَبِيَّةِ</a></h3>
-      <h3><a href="maqal.HTML">حتى نتمكن من نصر أهلنا وإخواننا في الأرض المحتلة .</a>
-      </h3>
-      <h3><a href="maqal2.HTML">الوعد بنصر المؤمنين</a></h3>
-
-
-    </article>
-
-
-
-
-
-  </div>
-
-
-
-</section>
-
-
-
-<section id="fatwa" class="tab-content">
-  <h2>سؤال و جواب</h2>
-
-  <!-- حقل البحث -->
-
-  <div class="articles-list" id="fatwa-list">
-    <article class="article-item">
-      <h3><a href="fatwa.HTML" class="article-item">ما حكم من سب الله؟ وهل تطلق زوجته أم لا؟</a></h3>
-    </article>
-
-    <article class="article-item">
-      <h3><a href="fatwa2.HTML" class="article-item">ما حكم السعي وراء الشهرة ؟</a></h3>
-    </article>
-
-    <article class="article-item">
-      <h3><a href="fatwa3.HTML" class="article-item">ما حكم الاختلاط للضرورة في العمل ؟</a></h3>
-    </article>
-
-    <article class="article-item">
-      <h3><a href="fatwa4.HTML" class="article-item">ما حكم وضع صور النساء في الإعلانات التجارية ؟</a></h3>
-    </article>
-
-    <article class="article-item">
-      <h3><a href="fatwa5.HTML" class="article-item">متى يجوز للمسلم أن يأخذ قرضاً من البنك ؟</a></h3>
-    </article>
-  </div>
-</section>
-
-
-
-
-
-
-
-
- 
-
-
-
-
-<section id="home" class="tab-content active">
-
-<section id="home" class="about-site">
-  <h2 class="section-title">نبذة عن الموقع</h2>
-  <p class="about-text">
-مَوقع يسعى لنَشر عِلم وفوائد فَضِيلَة الشَّيخ الدَّكتور حُسَين بن عُودَة العَوايشَة ، الموقع بإدارة طلاب الشيخ  </p>
-</section>
-
- <section class="book-slider">
-<h2 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">
-  أحدث الكتب
-</h2>
-
-  <!-- سهم يسار -->
-  <button class="slider-arrow arrow-left" onclick="prevBook()">❮</button>
-
-  <!-- كتاب 1 -->
-  <div class="book-slide active">
-    <img src="فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.png">
-    <div class="book-details">
-      <h3>فتح العليم في شرح أدعية وأذكار الصلاة</h3>
-      <p>
-        كتاب يشرح أدعية وأذكار الصلاة من التكبير إلى السجود
-        بأسلوب علمي ميسر.
-      </p>
-            <a href="فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.pdf" class="download-btn" onclick="return confirmDownload('فتح العليم في شرح أدعية وأذكار الصلاة من التكبير إلى السجود.pdf')"> تحميل الكتاب</a>
-
-    </div>
-  </div>
-
-  <!-- كتاب 2 -->
-  <div class="book-slide">
-    <img src="فيض الرحمن في مفكرة رمضان .png">
-    <div class="book-details">
-      <h3>فيض الرحمن في مفكرة رمضان </h3>
-      <p>
-       يَتَضَمَّنُ هٰذَا الكِتَابُ وَظَائِفَ شَهْرِ رَمَضَانَ المُبَارَكِ وَأَعْمَالَهُ، وَقَدْ جَعَلَ الشَّيْخُ لِكُلِّ يَوْمٍ مِنْ أَيَّامِ رَمَضَانَ صَفْحَتَيْنِ، تَضُمَّانِ التَّذْكِيرَ بِفَضْلِهِ، وَأَحْكَامِهِ، وَآدَابِهِ، وَفَضْلِ تِلَاوَةِ القُرْآنِ العَظِيمِ، وَالصَّدَقَاتِ، وَمَا يَلْزَمُ العِيدَ مِنَ البِرِّ وَالصِّلَةِ وَغَيْرِهَا مِنَ الحُقُوقِ.
-      </p>
-            <a href="فيض الرحمن في مفكرة رمضان .pdf" class="download-btn" onclick="return confirmDownload('فيض الرحمن في مفكرة رمضان .pdf')"> تحميل الكتاب</a>
-    </div>
-  </div>
-
-  <!-- كتاب 3 -->
-  <div class="book-slide">
-    <img src="المظهرية الجوفاء.png">
-    <div class="book-details">
-      <h3>المظهرية الجوفاء</h3>
-      <p>
-يَتَضَمَّنُ الكِتَابُ ذَم المُظَاهَرِيَّةِ المُعَاصِرَةِ، وَكَثِيرًا مِنْ أَسَالِيبِهَا فِي العَصْرِ الحَدِيثِ، كَالمُظَاهَرِيَّةِ فِي الأَفْرَاحِ، وَالمَآتِمِ، وَالزِّيَارَاتِ، وَيَتَنَاوَلُ حَالَ مَسَاجِدِ اليَوْمِ، مُقَارِنًا إِيَّاهَا بمَسْجِدِ النَّبِيِّ ﷺ، وَكَيْفَ كَانَ حَالُ سَلَفِ هٰذِهِ الأُمَّةِ فِي لزوم الكتاب و السُّنَّة
-      </p>
-<a href="المظهرية الجوفاء.pdf" class="download-btn" onclick="return confirmDownload('المظهرية الجوفاء.pdf')"> تحميل الكتاب</a>
-    </div>
-  </div>
-
-   <!-- كتاب 4 -->
-  <div class="book-slide">
-    <img src="البكاء من خشية الله.png">
-    <div class="book-details">
-      <h3>البكاء من خشية الله</h3>
-      <p>
-كِتَابٌ يَتَضَمَّنُ فَضْلَ البُكَاءِ مِنْ خَشْيَةِ اللهِ، وَيُوَضِّحُ السَّبِيلَ إِلَى ذٰلِكَ، مُعَالِجًا العَوَائِقَ قَدْرَ المُسْتَطَاعِ، ذَاكِرًا بَعْضَ النُّصُوصِ وَالآثَارِ فِي بُكَاءِ النَّبِيِّ ﷺ وَأَصْحَابِهِ رَضِيَ اللهُ عَنْهُمْ
-      </p>
-            <a href="البكاء من خشية الله.pdf" class="download-btn" onclick="return confirmDownload('البكاء من خشية الله.pdf')"> تحميل الكتاب</a>
-    </div>
-  </div>
-
-
-   <!-- كتاب 5 -->
-  <div class="book-slide">
-    <img src="مصيبة موت النبي.png">
-    <div class="book-details">
-      <h3> مصيبة موت النبي صلى الله عليه وسلم</h3>
-      <p>
-كِتَابٌ يَتَكَلَّمُ عَنْ عِظَمِ مُصِيبَةِ مَوْتِ النَّبِيِّ ﷺ، وَأَثَرِ هٰذِهِ المُصِيبَةِ عَلَى المُجْتَمَعِ وَالفَرْدِ
-      </p>
-       <a href="مصيبة موت النبي.pdf" class="download-btn" onclick="return confirmDownload('مصيبة موت النبي.pdf')"> تحميل الكتاب</a>
-    </div>
-  </div>
-
-  <!-- سهم يمين -->
-  <button class="slider-arrow arrow-right" onclick="nextBook()">❯</button>
-
-
- 
-
-
-</section>
-
-<section class="articles-slider" id="home-articles-slider">
-  <h2 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">
-    أحدث المقالات 
-  </h2>
-
-  <!-- سهم يسار -->
-  <button class="slider-arrow arrow-left" onclick="prevArticle()">❮</button>
-
-  <!-- مقال 1 -->
-  <div class="article-slide active">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">نَصِيحَةُ مُحِبٍّ فِي المَذْهَبِيَّةِ</h3>
-      <p style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">مقال يوضح نصائح محبّة في المذهبية بأسلوب مبسط وميسر.</p>
-      <a href="MOHADMD.2.HTML" class="read-btn">اقرأ المقال</a>
-    </div>
-  </div>
-
-  <!-- مقال 2 -->
-  <div class="article-slide">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">حتى نتمكن من نصر أهلنا وإخواننا</h3>
-      <p style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">مقال يشرح أهمية النصر والدعاء للأهل والإخوان في الأرض المحتلة.</p>
-      <a href="maqal.HTML" class="read-btn">اقرأ المقال</a>
-    </div>
-  </div>
-
-  <!-- مقال 3 -->
-  <div class="article-slide">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">الوعد بنصر المؤمنين</h3>
-      <p style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">مقال يوضح الوعد بنصر المؤمنين في الدنيا والآخرة.</p>
-      <a href="maqal2.HTML" class="read-btn">اقرأ المقال</a>
-    </div>
-  </div>
-
-  <!-- سهم يمين -->
-  <button class="slider-arrow arrow-right" onclick="nextArticle()">❯</button>
-
-  <!-- النقاط -->
-  <div class="slider-dots-articles"></div>
-</section>
-
-
-
-
-<section class="articles-slider" id="home-fatwa-slider">
-  <h2 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">
-    أحدث الفتاوى
-  </h2>
-
-  <!-- سهم يسار -->
-  <button class="slider-arrow arrow-left" onclick="prevFatwa()">❮</button>
-
-  <!-- سؤال 1 -->
-  <div class="article-slide active">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">ما حكم من سب الله؟ وهل تطلق زوجته أم لا؟</h3>
-      <a href="fatwa.HTML" class="read-btn">اقرأ الجواب</a>
-    </div>
-  </div>
-
-  <!-- سؤال 2 -->
-  <div class="article-slide">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">ما حكم السعي وراء الشهرة ؟</h3>
-      <a href="fatwa2.HTML" class="read-btn">اقرأ الجواب</a>
-    </div>
-  </div>
-
-  <!-- سؤال 3 -->
-  <div class="article-slide">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;">ما حكم الاختلاط للضرورة في العمل ؟</h3>
-      <a href="fatwa3.HTML" class="read-btn">اقرأ الجواب</a>
-    </div>
-  </div>
-
-
-    <div class="article-slide">
-    <div class="article-info">
-      <h3 style="color: var(--green-dark); margin-bottom: 20px; text-align: right; margin-right: 20px;"> ما حكم وضع صور النساء في الإعلانات التجارية ؟</h3>
-      <a href="fatwa3.HTML" class="read-btn">اقرأ الجواب</a>
-    </div>
-  </div>
-
-  <!-- سهم يمين -->
-  <button class="slider-arrow arrow-right" onclick="nextFatwa()">❯</button>
-
-  <!-- النقاط -->
-  <div class="slider-dots-fatwa"></div>
-
-  <style>
-/* تصميم السلايدر */
-#home-fatwa-slider {
-  position: relative;
-  max-width: 900px;
-  padding-bottom: 45px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-#home-fatwa-slider .article-slide {
-  display: none;
-  text-align: right;
-  direction: rtl;
-}
-
-#home-fatwa-slider h3 {
-  font-size: 1.5em;
-  color: var(--green-dark);
-  margin-bottom: 15px;
-}
-
-#home-fatwa-slider p {
-  font-size: 1.2em;
-  color: var(--text-secondary);
-  line-height: 2.5;
-  margin-bottom: 30px;
-}
-
-#home-fatwa-slider .article-slide.active {
-  display: block;
-}
-
-#home-fatwa-slider .slider-arrow {
-  position: absolute;
-  top: 50%;       
-  transform: translateY(-50%);
-  background-color: #8b6718;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  bottom: 15px;           
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  font-size: 24px;
-    transition: 0.3s;
-}
-
-#home-fatwa-slider .slider-arrow:hover {
-  background: var(--green-dark);
-}
-
-#home-fatwa-slider .arrow-left { right: 10px; }
-#home-fatwa-slider .arrow-right { left: 10px; }
-
-.slider-dots-fatwa {
-  text-align: center;
-  margin-top: 15px;
-}
-
-
-#home-fatwa-slider .slider-dots-fatwa {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-}
-
-.slider-dots-fatwa span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.slider-dots-fatwa span.active {
-  background-color: #8b6718;
-}
-
-#home-fatwa-slider .arrow-left {
-  right: 10px;
-}
-
-#home-fatwa-slider .arrow-right {
-  left: 10px;
-}
-#home-fatwa-slider .slider-dots-articles {
-  text-align: center;
-  margin-top: 20px;
-}
-#home-fatwa-slider .slider-dots-articles span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 6px;
-  cursor: pointer;
-}
-#home-fatwa-slider .slider-dots-articles span.active {
-  background-color: var(--green-main);
-}
-</style>
-</section>
-
-
-
-</section>
-
-
-
 
 
 
@@ -1524,249 +381,61 @@
   </footer>
 
 
+
 <script>
-  const tabLinks = document.querySelectorAll('.tab-link');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  function activateTab(tabName) {
-    tabLinks.forEach(link => {
-      link.classList.toggle('active', link.dataset.target === tabName);
-    });
-
-    tabContents.forEach(section => {
-      section.classList.toggle('active', section.id === tabName);
-    });
-  }
-
-  // عند الضغط على التبويب
-  tabLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = this.dataset.target;
-      activateTab(target);
-      history.pushState(null, '', `?tab=${target}`);
-    });
-  });
-
-  // عند فتح الصفحة من الرابط
-  const params = new URLSearchParams(window.location.search);
-  const tabFromURL = params.get('tab') || 'dars';
-  activateTab(tabFromURL);
-
-
- function confirmDownload(url) {
+  function confirmDownload(url) {
     const ok = confirm('هذا الكتاب لمن أراد الانتفاع به ولا يسمح بطباعته للمتاجرة فيه');
-    if (ok) {
-      window.location.href = url;
-    }
+    if(ok) { window.location.href = url; }
     return false;
   }
 
-  // =============================
-  // التبويبات (Navigation Tabs)
-  // =============================
+  // تبديل التبويبات
   const tabLinks = document.querySelectorAll('.tab-link');
   const tabContents = document.querySelectorAll('.tab-content');
 
-  function activateTab(tabName) {
-    // تفعيل الرابط
-    tabLinks.forEach(link => {
-      link.classList.toggle('active', link.dataset.target === tabName);
-    });
-
-    // تفعيل المحتوى
-    tabContents.forEach(section => {
-      section.classList.toggle('active', section.id === tabName);
-    });
-  }
-
-  // عند الضغط على التبويبات
   tabLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
+    link.addEventListener('click', function(e){
       e.preventDefault();
       const target = this.dataset.target;
 
-      activateTab(target);
+      tabLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
 
-      // تحديث الرابط بدون إعادة تحميل
-      history.pushState(null, '', `?tab=${target}`);
+      tabContents.forEach(tc => {
+        tc.classList.toggle('active', tc.id === target);
+      });
     });
   });
 
-  // =============================
-  // قراءة التبويب من الرابط ?tab=
-  // =============================
-  const params = new URLSearchParams(window.location.search);
-  const tabFromURL = params.get('tab');
+  // قراءة التبويب المطلوب من الرابط
+const urlParams = new URLSearchParams(window.location.search);
+const tabFromURL = urlParams.get('tab');
 
-  if (tabFromURL) {
-    activateTab(tabFromURL);
-  } else {
-    activateTab('home'); // الافتراضي
+if (tabFromURL) {
+  const targetLink = document.querySelector(`.tab-link[data-target="${tabFromURL}"]`);
+
+  if (targetLink) {
+    targetLink.click(); // تفعيل التبويب المطلوب
   }
-
-  // تمييز المقال المختار عند الضغط
-  const articleLinks = document.querySelectorAll('.articles-list a');
-
-  articleLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      articleLinks.forEach(l => l.classList.remove('active-article'));
-      this.classList.add('active-article');
-    });
-  });
-
-  // ==============================
-  // سلايدر الكتب مع الأسهم والنقاط
-  // ==============================
-
-  let currentBook = 0;
-const books = document.querySelectorAll('#home .book-slide');
-const slider = document.querySelector('#home .book-slider');
-
-if(slider && books.length > 0){
-
-  // إنشاء النقاط
-  const dotsContainer = document.createElement('div');
-  dotsContainer.className = 'slider-dots';
-  slider.appendChild(dotsContainer);
-
-  const dots = [];
-  books.forEach((book, index) => {
-    const dot = document.createElement('span');
-    if(index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToBook(index));
-    dotsContainer.appendChild(dot);
-    dots.push(dot);
-  });
-
-  // عرض الكتاب الحالي
-  function showBook(index){
-    books.forEach(b => b.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    books[index].classList.add('active');
-    dots[index].classList.add('active');
-  }
-
-  // الانتقال للكتاب التالي
-  function nextBook(){
-    currentBook = (currentBook + 1) % books.length;
-    showBook(currentBook);
-  }
-
-  // الانتقال للكتاب السابق
-  function prevBook(){
-    currentBook = (currentBook - 1 + books.length) % books.length;
-    showBook(currentBook);
-  }
-
-  // الانتقال لأي كتاب بالنقطة
-  function goToBook(index){
-    currentBook = index;
-    showBook(currentBook);
-  }
-
-  // عرض أول كتاب عند تحميل الصفحة
-  showBook(0);
 }
 
+// تمييز المقال المختار عند الضغط
+const articleLinks = document.querySelectorAll('.articles-list a');
 
-
-// ===== سلايدر المقالات =====
-
-
-
-
-
-// ==============================
-// سلايدر المقالات في الصفحة الرئيسية
-// ==============================
-
-let currentArticle = 0;
-const articles = document.querySelectorAll('#home-articles-slider .article-slide');
-const dotsContainerArticles = document.querySelector('#home-articles-slider .slider-dots-articles');
-const dotsArticles = [];
-
-// إنشاء النقاط
-articles.forEach((article, index) => {
-  const dot = document.createElement('span');
-  if(index === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goToArticle(index));
-  dotsContainerArticles.appendChild(dot);
-  dotsArticles.push(dot);
+articleLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    articleLinks.forEach(l => l.classList.remove('active-article')); // إزالة من الكل
+    this.classList.add('active-article'); // إضافة اللون للمقال الحالي
+  });
 });
 
-// عرض المقال الحالي
-function showArticle(index) {
-  articles.forEach(a => a.classList.remove('active'));
-  dotsArticles.forEach(d => d.classList.remove('active'));
-  articles[index].classList.add('active');
-  dotsArticles[index].classList.add('active');
-}
-
-// المقال التالي
-function nextArticle() {
-  currentArticle = (currentArticle + 1) % articles.length;
-  showArticle(currentArticle);
-}
-
-// المقال السابق
-function prevArticle() {
-  currentArticle = (currentArticle - 1 + articles.length) % articles.length;
-  showArticle(currentArticle);
-}
-
-// الانتقال لأي مقال بالنقطة
-function goToArticle(index) {
-  currentArticle = index;
-  showArticle(currentArticle);
-}
-
-// عرض أول مقال عند التحميل
-showArticle(0);
 
 
-let currentFatwa = 0;
-const fatwas = document.querySelectorAll('#home-fatwa-slider .article-slide');
-const dotsContainerFatwa = document.querySelector('#home-fatwa-slider .slider-dots-fatwa');
-const dotsFatwa = [];
 
-// إنشاء النقاط
-fatwas.forEach((fatwa, index) => {
-  const dot = document.createElement('span');
-  if(index === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goToFatwa(index));
-  dotsContainerFatwa.appendChild(dot);
-  dotsFatwa.push(dot);
-});
 
-// عرض السؤال الحالي
-function showFatwa(index) {
-  fatwas.forEach(f => f.classList.remove('active'));
-  dotsFatwa.forEach(d => d.classList.remove('active'));
-  fatwas[index].classList.add('active');
-  dotsFatwa[index].classList.add('active');
-}
 
-// السؤال التالي
-function nextFatwa() {
-  currentFatwa = (currentFatwa + 1) % fatwas.length;
-  showFatwa(currentFatwa);
-}
 
-// السؤال السابق
-function prevFatwa() {
-  currentFatwa = (currentFatwa - 1 + fatwas.length) % fatwas.length;
-  showFatwa(currentFatwa);
-}
 
-// الانتقال لأي سؤال بالنقطة
-function goToFatwa(index) {
-  currentFatwa = index;
-  showFatwa(currentFatwa);
-}
-
-// عرض أول سؤال عند تحميل الصفحة
-showFatwa(0);
 
 
 
