@@ -18,10 +18,12 @@
     }
 
     body {
-      font-family: 'Traditional Arabic', Tahoma, sans-serif;
+  font-family: 'Amiri', 'Traditional Arabic', 'Tahoma', serif;
       background-color: var(--bg-light);
       margin: 0;
       padding: 0;
+        font-size: 18px;
+        line-height: 2.2;
       direction: rtl;
       color: var(--text-secondary);
     }
@@ -36,7 +38,27 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    header h1 { font-size: 3em; margin:0;}
+
+    h1, h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+
+header h1 {
+  font-size: 3.2em;
+}
+
+
+
+header h2 {
+  font-size: 2.2em;
+  opacity: 0.95;
+}
+
+
+
+
+    header h1 { font-size: 3em; margin:0; }
     header h2 { font-size: 2em; margin-top:10px;}
 
     nav {
@@ -55,6 +77,8 @@
       padding: 10px 0;
       margin: 0;
       list-style: none;
+        flex-wrap: wrap;
+
     }
 
     nav ul li a {
@@ -65,7 +89,14 @@
       color: var(--text-secondary);
       border-radius: 5px;
       transition: 0.3s;
+        font-weight: 600;
+
     }
+
+
+    nav ul li a:hover {
+  transform: translateY(-2px);
+}
 
     nav ul li a:hover,
     nav ul li a.active {
@@ -90,18 +121,27 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 6px 22px rgba(0,0,0,0.12);
-      transition: 0.3s;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
       text-align: center;
       padding-bottom: 20px;
     }
 
-    .book-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.18); }
+    .book-card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.18); }
 
     .book-card img { width: 100%; height: 330px; object-fit: cover; border-bottom: 5px solid var(--green-main); }
 
     .book-info { padding: 18px 25px; }
     .book-info h3 { font-size: 1.4em; color: var(--green-dark); margin-bottom: 10px; }
     .book-info p { color: var(--text-secondary); font-size: 1.05em; line-height: 1.8; margin-bottom: 18px; }
+
+
+.book-info p,
+.article-info p,
+.about-text {
+  text-align: justify;
+}
+
+
 
     .download-btn {
       text-decoration: none;
@@ -111,6 +151,7 @@
       border-radius: 30px;
       font-size: 1.05em;
       font-weight: bold;
+        letter-spacing: 0.5px;
       display: inline-block;
       transition: 0.25s;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -254,6 +295,23 @@
   overflow: hidden;
 }
 
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book-slide,
+.article-slide {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
 .book-slide {
   display: none;
   align-items: center;
@@ -306,6 +364,7 @@
 .slider-arrow {
   position: absolute;
   top: 50%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   transform: translateY(-50%);
   background-color: #8b6718;
   border: none;
@@ -321,6 +380,8 @@
 
 .slider-arrow:hover {
   background-color: #733007;
+    transform: scale(1.1);
+
 }
 
 .arrow-left {
@@ -333,13 +394,40 @@
 
 /* موبايل */
 @media (max-width: 768px) {
-  .book-slide {
-    flex-direction: column;
-    text-align: center;
+   header {
+    padding: 70px 15px;
   }
 
-  .book-slide img {
-    width: 220px;
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header h2 {
+    font-size: 1.6em;
+  }
+
+  .about-site p {
+    font-size: 20px !important;
+    line-height: 2;
+  }
+
+  .book-info p,
+  .article-info p {
+    font-size: 16px;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+
+  .book-card img {
+    height: 260px;
+  }
+
+  .dars-card {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -376,7 +464,7 @@
 .about-site {
   max-width: 1100px;
   margin: 60px auto;
-  background: var(--white);
+  background: linear-gradient(135deg, #ffffff, #f4fbf6);
   padding: 45px 30px;
   border-radius: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,.15);
@@ -414,6 +502,7 @@
 }
 
 
+
 .about-text {
   max-width: 800px;
   margin: auto;
@@ -428,7 +517,8 @@
   margin: auto;
   line-height: 2.5 !important;
   color: #444;
-  font-size: 28px !important;   /* تكبير واضح جدًا */
+  font-size: 26px !important;   /* تكبير واضح جدًا */
+
 }
 
 .dars-card {
@@ -441,7 +531,7 @@
   background: var(--white);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  transition: transform 0.3s;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .dars-card:hover {
@@ -540,6 +630,13 @@
   margin-bottom: 30px;
 }
 
+
+download-btn:hover,
+.read-btn:hover {
+  transform: scale(1.05);
+}
+
+
 .read-btn {
   text-decoration: none;
   background-color: var(--green-main);
@@ -547,6 +644,7 @@
   color: var(--white);
   border-radius: 30px;
   font-size: 1.05em;
+  letter-spacing: 0.5px;
   font-weight: bold;
   transition: 0.3s;
 }
